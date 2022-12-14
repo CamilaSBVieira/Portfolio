@@ -1,0 +1,13 @@
+@import './base.scss';
+$theme-colors: (
+    "primary": $white,
+    "secondary": $gray,
+    "success": $pink,
+    "dark": $black,
+);
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+.nav-link {
+    color: $black;
+}
