@@ -10,7 +10,6 @@ import { useState, useEffect } from 'react';
 import { techList } from './functions/techList';
 import { socialMedia } from './functions/socialMedia';
 import { ScrollToTop } from './components/ScrollToTop';
-import { imgLink, imgLinkMobile, link } from './functions/link';
 import { formatName } from './functions/formatName';
 
 function App() {
