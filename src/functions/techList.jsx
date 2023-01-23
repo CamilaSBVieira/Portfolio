@@ -1,33 +1,38 @@
-import { faBootstrap, faCss3, faGithub, faHtml5, faJsSquare, faNodeJs, faNpm, faReact, faSass } from "@fortawesome/free-brands-svg-icons";
+import { faBootstrap, faCss3, faGithub, faHtml5, faJsSquare, faNodeJs, faNpm, faReact, faSass, faFigma } from "@fortawesome/free-brands-svg-icons";
 
 export const techList = [
     {
-        name: 'html',
+        name: 'HTML',
         icon: faHtml5,
         level: 80
     },
     {
-        name: 'css',
+        name: 'CSS',
         icon: faCss3,
         level: 70
     },
     {
-        name: 'sass',
+        name: 'SASS',
         icon: faSass,
         level: 20
     },
     {
-        name: 'bootstrap',
+        name: 'Bootstrap',
         icon: faBootstrap,
         level: 30
     },
     {
-        name: 'javascript',
+        name: 'Figma',
+        icon: faFigma,
+        level: 40
+    },
+    {
+        name: 'JavaScript',
         icon: faJsSquare,
         level: 60
     },
     {
-        name: 'react',
+        name: 'React',
         icon: faReact,
         level: 40
     },
@@ -37,12 +42,12 @@ export const techList = [
         level: 40
     },
     {
-        name: 'node',
+        name: 'Node',
         icon: faNodeJs,
         level: 20
     },
     {
-        name: 'github',
+        name: 'GitHub',
         icon: faGithub,
         level: 45
     }

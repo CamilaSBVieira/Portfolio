@@ -1,30 +1,35 @@
-import { faCodepen, faGithub, faInstagram, faTiktok } from "@fortawesome/free-brands-svg-icons";
+import { faCodepen, faGithub, faInstagram, faTiktok, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export const socialMedia = [
     {
-        name: 'email',
+        name: 'Email',
         icon: faEnvelope,
-        link: '/contact/emailme'
+        link: 'mailto:camila.frontend@gmail.com'
     },
     {
-        name: 'github',
+        name: 'LinkedIn',
+        icon: faLinkedin,
+        link: 'https://www.linkedin.com/in/camila-vieira-9b9710ba'
+    },
+    {
+        name: 'GitHub',
         icon: faGithub,
         link: 'https://github.com/CamilaSBVieira'
     },
     {
-        name: 'codepen',
+        name: 'CodePen',
         icon: faCodepen,
         link: 'https://codepen.io/camilasbvieira'
     },
     {
-        name: 'instagram',
+        name: 'Instagram',
         icon: faInstagram,
         link: ''
     },
     {
-        name: 'tiktok',
+        name: 'TikTok',
         icon: faTiktok,
-        link: ''
+        link: 'https://www.tiktok.com/@camila.frontend'
     }
 ];

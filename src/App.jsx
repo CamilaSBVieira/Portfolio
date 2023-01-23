@@ -10,7 +10,7 @@ import { useState, useEffect } from 'react';
 import { techList } from './functions/techList';
 import { socialMedia } from './functions/socialMedia';
 import { ScrollToTop } from './components/ScrollToTop';
-import { link } from './functions/link';
+import { imgLink, imgLinkMobile, link } from './functions/link';
 import { formatName } from './functions/formatName';
 
 function App() {
@@ -46,14 +46,30 @@ function App() {
       .then(resFiltered => setFavorites(resFiltered));
   }, []);
 
+  const [projectsImages, setProjectsImages] = useState([]);
+  useEffect(() => {
+    fetch('https://portfolio-server-seven-chi.vercel.app/projectImages')
+      .then((response) => response.json())
+      .then((resJson) => {
+        let array = []
+        Object.values(resJson).forEach(value => {
+          array.push(value)
+        })
+        return array
+      })
+      .then(array => {
+        setProjectsImages(array)
+      })
+  }, [])
+
   return (
     <BrowserRouter>
       <ScrollToTop />
       <Container fluid>
         <Menu></Menu>
         <Routes>
-          <Route path='/' element={<Home favorites={favorites} technologies={technologies} />} />
-          <Route path='/projects/*' element={<Projects projects={projects} technologies={technologies} />} />
+          <Route path='/' element={<Home favorites={favorites} technologies={technologies} projectsImages={projectsImages} />} />
+          <Route path='/projects/*' element={<Projects projects={projects} technologies={technologies} projectsImages={projectsImages} />} />
           <Route path='/projects/:name' element={<Project />} />
           <Route path='/contact/*' element={<Contact socialMedias={socialMedias} />} />
         </Routes>

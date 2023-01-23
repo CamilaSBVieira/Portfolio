@@ -2,14 +2,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Card, Carousel, Col, Container, ListGroup, ListGroupItem, Row } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import { Title } from "./Title";
-import AluraGeek from '../assets/images/AluraGeek.jpg';
-import AluraGeekMobile from '../assets/images/AluraGeekMobile.jpg';
 
 export function Project() {
 
     // let { name } = useParams();
     const location = useLocation();
-    const { project, technologies } = location.state;
+    const { project, technologies, projectImages } = location.state;
 
     return (
         <Container fluid className="p-0 mb-5">
@@ -23,7 +21,7 @@ export function Project() {
                         <img
                             className="d-block mx-auto img-fluid"
                             style={{maxHeight: 500, width: 'auto' }}
-                            src={AluraGeek}
+                            src={projectImages.desktop}
                             alt="Desktop View"
                         />
                     </Carousel.Item>
@@ -31,12 +29,12 @@ export function Project() {
                         <img
                             className="d-block mx-auto img-fluid"
                             style={{maxHeight: 500, width: 'auto'}}
-                            src={AluraGeekMobile}
+                            src={projectImages.mobile}
                             alt="Mobile View"
                         />
                     </Carousel.Item>
                 </Carousel>
-                <img src={AluraGeekMobile} title="Mobile View" style={{ maxHeight: 500, width: 'auto' }} className='d-block d-md-none mx-auto' />
+                <img src={projectImages.mobile} title="Mobile View" style={{ maxHeight: 500, width: 'auto' }} className='d-block d-md-none mx-auto' />
             </Row>
             <Row>
                 <Col xs='12' lg='6' className='mx-auto'>

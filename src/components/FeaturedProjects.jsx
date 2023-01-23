@@ -4,7 +4,7 @@ import '../scss/featured.scss';
 import { Title } from "./Title";
 
 
-export function FeaturedProjects({ favorites, technologies }) {
+export function FeaturedProjects({ favorites, technologies, projectsImages }) {
     return (
         <Container fluid>
             <Row>
@@ -12,7 +12,11 @@ export function FeaturedProjects({ favorites, technologies }) {
             </Row>
             <Row className="d-flex flex-column align-items-start featured">
                 {favorites.map((favorite, index) => {
-                    return <ProjectCard key={index} project={favorite} technologies={technologies}></ProjectCard>
+                    return projectsImages.map(pi => {
+                        if(pi.name === favorite.name) {
+                            return <ProjectCard key={index} project={favorite} technologies={technologies} projectImages={{desktop: pi.link, mobile: pi.mobileLink}}></ProjectCard>
+                        }
+                    })
                 })}
 
             </Row>

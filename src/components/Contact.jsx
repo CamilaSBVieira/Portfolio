@@ -1,6 +1,4 @@
 import { Col, Container, Row } from "react-bootstrap";
-import { Link, Route, Routes } from "react-router-dom";
-import { EmailMe } from "./EmailMe";
 import { Social } from "./Social";
 import { Title } from "./Title";
 
@@ -18,9 +16,6 @@ export function Contact({ socialMedias }) {
                     <Social styling='fs-1 d-flex justify-content-center' socialMedias={socialMedias} />
                 </Col>
             </Row>
-            <Routes>
-                <Route path="emailme" element={<EmailMe />} />
-            </Routes>
         </Container>
     )
 }

@@ -1,4 +1,3 @@
-import { faBootstrap, faCss3, faGithub, faHtml5, faJsSquare, faReact } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Col, Container, ProgressBar, Row } from "react-bootstrap";
 import { Title } from "./Title";
@@ -14,10 +13,10 @@ export function Experience({ technologies }) {
                     return (
                         <Row key={index}>
                             <Col xs='3' className="p-0 my-2">
-                                <FontAwesomeIcon icon={t.icon} style={{ height: 30 }} className='d-block mx-auto'/>
+                                <FontAwesomeIcon icon={t.icon} style={{ height: 30 }} className='d-block mx-auto' title={t.name}/>
                             </Col>
                             <Col xs='9' className="p-0 my-2">
-                                <ProgressBar animated now={t.level} variant='success' style={{ height: 30 }} />
+                                <ProgressBar animated now={t.level} role="progressbar" variant='success' style={{ height: 30 }} />
                             </Col>
                         </Row>
                     )
