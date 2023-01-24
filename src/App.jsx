@@ -11,6 +11,7 @@ import { techList } from './functions/techList';
 import { socialMedia } from './functions/socialMedia';
 import { ScrollToTop } from './components/ScrollToTop';
 import { formatName } from './functions/formatName';
+import { link } from './functions/link';
 
 function App() {
 

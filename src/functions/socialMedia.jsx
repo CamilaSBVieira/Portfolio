@@ -22,11 +22,11 @@ export const socialMedia = [
         icon: faCodepen,
         link: 'https://codepen.io/camilasbvieira'
     },
-    {
-        name: 'Instagram',
-        icon: faInstagram,
-        link: ''
-    },
+    // {
+    //     name: 'Instagram',
+    //     icon: faInstagram,
+    //     link: ''
+    // },
     {
         name: 'TikTok',
         icon: faTiktok,
