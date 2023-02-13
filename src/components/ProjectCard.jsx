@@ -21,7 +21,7 @@ export function ProjectCard({ project, technologies, projectImages}) {
                             <ListGroup horizontal className="fs-5">
                                 {project.topics.map((topic, index) => {
                                     return technologies.map(t => {
-                                        if (t.name === topic) {
+                                        if (t.name.toLowerCase() === topic.toLowerCase()) {
                                             return (<ListGroupItem key={index} className='border-0'>
                                                 <FontAwesomeIcon icon={t.icon} />
                                             </ListGroupItem>)

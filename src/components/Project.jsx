@@ -46,7 +46,7 @@ export function Project() {
                                 <ListGroup horizontal className="fs-4 my-2">
                                     {project.topics.map(topic => {
                                         return technologies.map(t => {
-                                            if (t.name === topic) {
+                                            if (t.name.toLowerCase() === topic.toLowerCase()) {
                                                 return (<ListGroupItem className='border-0'>
                                                     <FontAwesomeIcon icon={t.icon} />
                                                 </ListGroupItem>)
