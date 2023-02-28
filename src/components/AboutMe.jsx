@@ -12,15 +12,19 @@ export function AboutMe({ technologies }) {
             <Col xs='12' lg='8' className="fs-3 px-md-2 px-0 py-3 d-flex flex-column">
                 <Col>
                     <p>Meu nome é Camila, sou desenvolvedora Front-End React, com conhecimento também em Back-End. Sou apaixonada
-                         por construir aplicações.
+                        por construir aplicações.
                     </p>
                 </Col>
                 <Col className='p-0 m-0'>
-                    <ListGroup horizontal className=" fs-4 d-flex flex-wrap">
+                    <ListGroup horizontal className=" fs-4 d-flex align-items-center justify-content-center flex-wrap">
                         {technologies.map((t, index) => {
-                            return <ListGroupItem key={index} className='border-0'>
-                                <FontAwesomeIcon icon={t.icon} title={t.name}/>
-                            </ListGroupItem>
+                            if (t.icon) {
+                                return <ListGroupItem key={index} className="border-0">
+                                    <FontAwesomeIcon icon={t.icon} title={t.name} />
+                                </ListGroupItem>
+                            } else {
+                                return <p className="d-block mb-0">{t.name}</p>
+                            }
                         })}
                     </ListGroup>
                 </Col>

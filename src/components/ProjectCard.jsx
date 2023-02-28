@@ -2,7 +2,7 @@ import { Card, Col, ListGroup, ListGroupItem } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
-export function ProjectCard({ project, technologies, projectImages}) {
+export function ProjectCard({ project, technologies, projectImages }) {
 
     return (
         <Col className={`px-5 py-3 d-flex flex-wrap align-items-center`} xs='12' lg='9'>
@@ -22,9 +22,15 @@ export function ProjectCard({ project, technologies, projectImages}) {
                                 {project.topics.map((topic, index) => {
                                     return technologies.map(t => {
                                         if (t.name.toLowerCase() === topic.toLowerCase()) {
-                                            return (<ListGroupItem key={index} className='border-0'>
-                                                <FontAwesomeIcon icon={t.icon} />
-                                            </ListGroupItem>)
+                                            if (!t.icon) {
+                                                return <ListGroupItem key={index} className='border-0' title={t.name}>{t.name}</ListGroupItem>
+                                            } else {
+                                                return (
+                                                    <ListGroupItem key={index} className='border-0' title={t.name}>
+                                                        <FontAwesomeIcon icon={t.icon} />
+                                                    </ListGroupItem>
+                                                )
+                                            }
                                         }
                                     })
                                 })}

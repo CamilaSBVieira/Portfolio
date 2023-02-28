@@ -28,14 +28,14 @@ export function Menu() {
                                             </NavLink>
                                         </Nav.Item>
                                         <Nav.Item>
-                                            <NavLink to={'/projects'} className="nav-link">
-                                                Projects
-                                            </NavLink>
+                                        <NavLink to={'/projects'} className="nav-link">
+                                            Projects
+                                        </NavLink>
                                         </Nav.Item>
                                         <Nav.Item>
-                                            <NavLink to={'/contact'} className="nav-link">
-                                                Contact
-                                            </NavLink>
+                                        <NavLink to={'/contact'} className="nav-link">
+                                            Contact
+                                        </NavLink>
                                         </Nav.Item>
                                     </Nav>
                                 </Offcanvas.Body>

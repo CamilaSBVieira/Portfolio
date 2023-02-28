@@ -12,8 +12,13 @@ export function Experience({ technologies }) {
                 {technologies.map((t, index) => {
                     return (
                         <Row key={index}>
-                            <Col xs='3' className="p-0 my-2">
-                                <FontAwesomeIcon icon={t.icon} style={{ height: 30 }} className='d-block mx-auto' title={t.name}/>
+                            <Col xs='3' className="p-0 my-2 d-flex align-items-center justify-content-center">
+                                {t.icon &&
+                                    <FontAwesomeIcon icon={t.icon} style={{ height: 30 }} className='d-block mx-auto' title={t.name} />
+                                    ||
+                                    <p key={index} style={{ wordBreak: 'break-all'}} className="mb-0">{t.name}</p>
+                                }
+
                             </Col>
                             <Col xs='9' className="p-0 my-2">
                                 <ProgressBar animated now={t.level} role="progressbar" variant='success' style={{ height: 30 }} />

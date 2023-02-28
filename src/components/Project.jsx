@@ -16,11 +16,11 @@ export function Project() {
             </Row>
             <Row>
 
-                <Carousel variant="dark" className="d-none d-md-block" style={{minHeight: 500}}>
+                <Carousel variant="dark" className="d-none d-md-block" style={{ minHeight: 500 }}>
                     <Carousel.Item>
                         <img
                             className="d-block mx-auto img-fluid"
-                            style={{maxHeight: 500, width: 'auto' }}
+                            style={{ maxHeight: 500, width: 'auto' }}
                             src={projectImages.desktop}
                             alt="Desktop View"
                         />
@@ -28,7 +28,7 @@ export function Project() {
                     <Carousel.Item>
                         <img
                             className="d-block mx-auto img-fluid"
-                            style={{maxHeight: 500, width: 'auto'}}
+                            style={{ maxHeight: 500, width: 'auto' }}
                             src={projectImages.mobile}
                             alt="Mobile View"
                         />
@@ -47,9 +47,13 @@ export function Project() {
                                     {project.topics.map(topic => {
                                         return technologies.map(t => {
                                             if (t.name.toLowerCase() === topic.toLowerCase()) {
-                                                return (<ListGroupItem className='border-0'>
-                                                    <FontAwesomeIcon icon={t.icon} />
-                                                </ListGroupItem>)
+                                                if (!t.icon) {
+                                                    return <ListGroupItem className='border-0' title={t.name}>{t.name}</ListGroupItem>
+                                                } else {
+                                                    return (<ListGroupItem className='border-0'>
+                                                        <FontAwesomeIcon icon={t.icon} />
+                                                    </ListGroupItem>)
+                                                }
                                             }
                                         })
                                     })}

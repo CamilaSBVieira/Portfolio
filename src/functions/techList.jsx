@@ -50,5 +50,9 @@ export const techList = [
         name: 'GitHub',
         icon: faGithub,
         level: 45
+    },
+    {
+        name: 'TypeScript',
+        level: 20
     }
 ];

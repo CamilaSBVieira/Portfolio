@@ -9,5 +9,11 @@ $theme-colors: (
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 .nav-link {
-    color: $black;
+    color: $pink;
+    &:hover {
+        color: $gray;
+    }
+    &:active {
+        color: $black;
+    }
 }
